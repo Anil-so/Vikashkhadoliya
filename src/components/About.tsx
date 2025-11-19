@@ -38,8 +38,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-background to-primary/5">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-primary/5 opacity-30 blur-3xl"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
             About Me & My Company
@@ -57,7 +58,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {highlights.map((item, index) => (
-            <Card key={index} className="text-center group hover:shadow-professional transition-all duration-300 animate-fade-in border-border/50 bg-card/50 backdrop-blur-sm">
+            <Card key={index} className="text-center group hover:shadow-professional transition-all duration-300 animate-fade-in border-border/40 bg-gradient-card/50 backdrop-blur-xl card-3d">
               <CardContent className="p-6">
                 <div className="w-14 h-14 bg-gradient-professional rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-glow">
                   <item.icon className="w-7 h-7 text-white" />
@@ -71,7 +72,7 @@ const About = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <Card className="p-8 shadow-professional border-border/50 bg-card/50 backdrop-blur-sm">
+          <Card className="p-8 shadow-professional border-border/40 bg-gradient-card backdrop-blur-lg card-3d">
             <h3 className="text-2xl font-bold mb-6 text-foreground flex items-center">
               <Building2 className="w-6 h-6 mr-3 text-primary" />
               W3 Software Solutions
@@ -87,6 +88,7 @@ const About = () => {
                 "Mobile App Solutions", 
                 "E-commerce Platforms",
                 "Digital Marketing Services",
+                "AI Automation",
                 "Cloud Solutions & DevOps"
               ].map((service, index) => (
                 <div key={index} className="flex items-center">
@@ -97,7 +99,7 @@ const About = () => {
             </div>
           </Card>
 
-          <Card className="p-8 shadow-professional border-border/50 bg-card/50 backdrop-blur-sm">
+          <Card className="p-8 shadow-professional border-border/40 bg-gradient-card backdrop-blur-lg card-3d">
             <h3 className="text-2xl font-bold mb-6 text-foreground flex items-center">
               <Award className="w-6 h-6 mr-3 text-primary" />
               Professional Journey
@@ -126,7 +128,7 @@ const About = () => {
           </Card>
         </div>
 
-        <Card className="p-8 lg:p-12 shadow-professional border-border/50 bg-gradient-to-r from-card/80 to-primary/5 backdrop-blur-sm">
+        <Card className="p-8 lg:p-12 shadow-professional border border-border/40 bg-gradient-to-r from-card/80 to-primary/10 backdrop-blur-xl card-3d">
           <div className="text-center mb-8">
             <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
               Company Achievements

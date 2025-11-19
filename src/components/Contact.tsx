@@ -7,8 +7,9 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/15 via-transparent to-secondary/15 opacity-30 blur-3xl"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Get In <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
@@ -21,7 +22,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div className="space-y-6">
-            <Card className="bg-gradient-card border-0 shadow-elegant">
+            <Card className="bg-gradient-card border border-border/30 shadow-elegant card-3d">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -35,7 +36,7 @@ const Contact = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-gradient-card border-0 shadow-elegant">
+            <Card className="bg-gradient-card border border-border/30 shadow-elegant card-3d">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -49,7 +50,7 @@ const Contact = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-gradient-card border-0 shadow-elegant">
+            <Card className="bg-gradient-card border border-border/30 shadow-elegant card-3d">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -66,7 +67,7 @@ const Contact = () => {
           
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="bg-gradient-card border-0 shadow-elegant">
+            <Card className="bg-gradient-card border border-border/30 shadow-elegant card-3d backdrop-blur-xl">
               <CardHeader>
                 <CardTitle className="text-2xl">Send me a message</CardTitle>
               </CardHeader>

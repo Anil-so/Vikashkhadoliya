@@ -26,18 +26,18 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? "bg-background/95 backdrop-blur-lg shadow-professional border-b border-border/50" 
-        : "bg-background/50 backdrop-blur-md"
+        ? "bg-[#040712]/90 backdrop-blur-2xl shadow-professional border-b border-border/50" 
+        : "bg-transparent backdrop-blur-lg"
     }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-professional rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Building2 className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-gradient-professional rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-glow">
+              <Building2 className="w-6 h-6 text-foreground" />
             </div>
             <div>
-              <div className="text-xl font-bold text-foreground">Vikash Khadoliya</div>
+              <div className="text-xl font-bold text-foreground tracking-wide">Vikash Khadoliya</div>
               <div className="text-xs text-muted-foreground">W3 Software Solutions</div>
             </div>
           </a>
@@ -57,17 +57,15 @@ const Navigation = () => {
             <div className="flex gap-2">
               <Button
                 asChild
-                variant="professional"
                 size="sm"
-                className="px-4"
+                className="px-4 bg-white/10 text-white border border-white/20 hover:bg-white/20"
               >
                 <a href="mailto:Khadoliyavikash@gmail.com">Email</a>
               </Button>
               <Button
                 asChild
-                variant="professional"
                 size="sm"
-                className="px-4"
+                className="px-4 bg-primary/30 text-white border border-primary/40 hover:bg-primary/40"
               >
                 <a href="tel:+917597881864">Call</a>
               </Button>
@@ -100,10 +98,10 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="px-4 flex gap-2">
-                <Button asChild variant="professional" size="sm" className="w-full px-4">
+                <Button asChild size="sm" className="w-full px-4 bg-white/10 text-white border border-white/20">
                   <a href="mailto:Khadoliyavikash@gmail.com">Email</a>
                 </Button>
-                <Button asChild variant="professional" size="sm" className="w-full px-4">
+                <Button asChild size="sm" className="w-full px-4 bg-primary/30 text-white border border-primary/40">
                   <a href="tel:+917597881864">Call</a>
                 </Button>
               </div>

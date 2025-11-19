@@ -1,13 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  ExternalLink,
-  Github,
-  Smartphone,
-  Globe,
-  Database,
-} from "lucide-react";
+import { ExternalLink, Smartphone, Globe, Database } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -58,8 +52,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-secondary/10 blur-3xl opacity-40"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Featured{" "}
@@ -76,13 +71,13 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group bg-gradient-card border-0 shadow-elegant hover:shadow-glow transition-all duration-300 overflow-hidden"
+              className="group bg-gradient-card border border-border/30 shadow-elegant hover:shadow-glow transition-all duration-500 overflow-hidden card-3d"
             >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 right-4">
@@ -146,7 +141,7 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="group">
+          <Button variant="cta" size="lg" className="group px-10">
             View All Projects
             <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
           </Button>

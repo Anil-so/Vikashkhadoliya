@@ -51,8 +51,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-24 bg-transparent relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-transparent blur-3xl opacity-40"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Technical <span className="bg-gradient-primary bg-clip-text text-transparent">Skills</span>
@@ -64,7 +65,7 @@ const Skills = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="bg-gradient-card border-0 shadow-elegant hover:shadow-glow transition-all duration-300 group">
+            <Card key={index} className="bg-gradient-card border border-border/30 shadow-elegant hover:shadow-glow transition-all duration-500 group card-3d backdrop-blur-lg">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -91,7 +92,7 @@ const Skills = () => {
         
         {/* Additional Skills Overview */}
         <div className="mt-16 text-center">
-          <Card className="bg-gradient-card border-0 shadow-elegant inline-block">
+          <Card className="bg-gradient-card border border-border/30 shadow-elegant inline-block card-3d">
             <CardContent className="p-8">
               <div className="flex items-center justify-center gap-4 mb-4">
                 <Code2 className="w-8 h-8 text-primary" />
