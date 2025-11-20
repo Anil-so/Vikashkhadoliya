@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* stylelint-disable at-rule-no-unknown */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/* stylelint-enable at-rule-no-unknown */
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
@@ -61,11 +63,14 @@ All colors MUST be HSL.
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     background-image:
       radial-gradient(circle at 20% 20%, hsl(200 80% 20% / 0.35), transparent 45%),
       radial-gradient(circle at 80% 0%, hsl(280 65% 25% / 0.35), transparent 50%),
@@ -121,6 +126,9 @@ All colors MUST be HSL.
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
       linear-gradient(#000 0 0);
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0.7;
@@ -162,6 +170,56 @@ All colors MUST be HSL.
 
   .social-animate.pulse-on-load {
     animation: icon-pulse 3s ease-in-out 1;
+  }
+
+  /* Founder/Profile frame refined look & interactions */
+  .founder-frame {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    transition: transform 450ms cubic-bezier(.2,1,.22,1), box-shadow 450ms ease, filter 450ms ease;
+    will-change: transform, box-shadow, filter;
+    border-radius: 0.85rem;
+    background-clip: padding-box;
+    animation: float 6.8s ease-in-out infinite;
+  }
+
+  .founder-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: inherit;
+    transform-origin: center center;
+    transition: transform 520ms cubic-bezier(.2,1,.22,1), filter 420ms ease;
+    backface-visibility: hidden;
+  }
+
+  /* Hover/tap interaction: gentle tilt + pop */
+  .card-3d:hover .founder-frame,
+  .founder-frame:hover {
+    transform: translateY(-10px) rotateX(6deg) rotateY(-6deg) scale(1.02);
+    box-shadow: 0 30px 60px -25px hsla(200, 90%, 56%, 0.45), 0 8px 30px -10px rgba(0,0,0,0.6);
+    filter: saturate(1.05) contrast(1.02);
+  }
+
+  /* Subtle rim highlight */
+  .founder-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+    mix-blend-mode: overlay;
+    opacity: 0.9;
+  }
+
+  /* Focus / active state for accessibility */
+  .founder-frame:focus-visible {
+    outline: 3px solid rgba(255,255,255,0.06);
+    outline-offset: 4px;
   }
 }
 
