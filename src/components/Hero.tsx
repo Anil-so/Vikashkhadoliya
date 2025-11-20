@@ -13,10 +13,10 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="container mx-auto px-6 py-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-6 py-20 md:py-32 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Text Content */}
-            <div className="space-y-6 animate-fade-in">
+            <div className="space-y-4 md:space-y-6 animate-fade-in">
             <div className="space-y-6">
               <div className="flex flex-wrap gap-3">
                 <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
@@ -51,7 +51,7 @@ const Hero = () => {
               </p>
             </div>
             
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 md:gap-4">
               <Button asChild size="lg" className="group bg-gradient-to-r from-primary to-secondary text-foreground shadow-glow hover:-translate-y-0.5 transition-transform duration-300">
                 <a href="mailto:khadoliyavikash@gmail.com">
                   <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
@@ -76,7 +76,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-professional rounded-2xl blur-2xl opacity-40 scale-110 group-hover:opacity-80 transition-opacity"></div>
               <div className="relative flex items-center justify-center">
                 {/* Enlarged, centered square profile frame (responsive) */}
-                <div className="relative w-56 sm:w-72 lg:w-96 aspect-square rounded-3xl border border-white/10 overflow-hidden backdrop-blur-md shadow-[0_30px_80px_-40px_rgba(0,0,0,0.85)] glow-border founder-frame">
+                <div className="relative w-64 sm:w-72 md:w-80 lg:w-96 aspect-square rounded-3xl border border-white/10 overflow-hidden backdrop-blur-md shadow-[0_30px_80px_-40px_rgba(0,0,0,0.85)] glow-border founder-frame">
                   <div className="absolute inset-0 bg-gradient-to-b from-white/8 via-transparent to-white/4 opacity-40 animate-pulse"></div>
                   <div className="absolute inset-0 border border-white/8 rounded-3xl"></div>
                   <div className="absolute inset-1 rounded-2xl border border-white/8 animate-spin-slow opacity-25"></div>
@@ -87,7 +87,7 @@ const Hero = () => {
                   />
                 </div>
                 {/* Caption and CTA below the image */}
-                <div className="mt-6 text-center">
+                <div className="mt-4 sm:mt-6 text-center">
                   <div className="text-sm text-muted-foreground font-medium">Founder & CEO at W3 Software Solutions</div>
                   <div className="mt-3 flex items-center justify-center">
                     <Button asChild size="sm" className="cta-visit bg-gradient-to-r from-primary to-secondary text-black font-semibold shadow-lg px-4 py-2 rounded-lg border border-white/20">
