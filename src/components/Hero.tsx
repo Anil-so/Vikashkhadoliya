@@ -76,7 +76,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-professional rounded-2xl blur-2xl opacity-40 scale-110 group-hover:opacity-80 transition-opacity"></div>
               <div className="relative flex items-center justify-center">
                 {/* Enlarged, centered square profile frame (responsive) */}
-                <div className="relative w-64 sm:w-72 md:w-80 lg:w-96 aspect-square rounded-3xl border border-white/10 overflow-hidden backdrop-blur-md shadow-[0_30px_80px_-40px_rgba(0,0,0,0.85)] glow-border founder-frame">
+                <div className="relative w-64 sm:w-80 md:w-96 lg:w-[36rem] max-w-[86vw] aspect-square rounded-3xl border border-white/10 overflow-hidden backdrop-blur-md shadow-[0_30px_80px_-40px_rgba(0,0,0,0.85)] glow-border founder-frame mx-auto">
                   <div className="absolute inset-0 bg-gradient-to-b from-white/8 via-transparent to-white/4 opacity-40 animate-pulse"></div>
                   <div className="absolute inset-0 border border-white/8 rounded-3xl"></div>
                   <div className="absolute inset-1 rounded-2xl border border-white/8 animate-spin-slow opacity-25"></div>
