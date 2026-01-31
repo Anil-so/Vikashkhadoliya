@@ -12,11 +12,11 @@ const Hero = () => {
           <div className="absolute bottom-16 right-24 w-[28rem] h-[28rem] bg-secondary/20 rounded-full floating-orb"></div>
         </div>
       </div>
-      
+
       <div className="container mx-auto px-6 py-20 md:py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Text Content */}
-            <div className="space-y-4 md:space-y-6 animate-fade-in">
+          <div className="space-y-4 md:space-y-6 animate-fade-in">
             <div className="space-y-6">
               <div className="flex flex-wrap gap-3">
                 <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
@@ -28,14 +28,14 @@ const Hero = () => {
                   W3 Software Solutions
                 </Badge>
               </div>
-              
+
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-foreground">
                 Hi, I'm{" "}
                 <span className="bg-gradient-professional bg-clip-text text-transparent">
                   Vikash Khadoliya
                 </span>
               </h1>
-              
+
               <div className="space-y-2">
                 <h2 className="text-2xl lg:text-3xl text-primary font-semibold">
                   Full Stack Developer
@@ -44,13 +44,13 @@ const Hero = () => {
                   Founder & CEO at W3 Software Solutions
                 </p>
               </div>
-              
+
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                Passionate full stack developer and entrepreneur building innovative digital solutions. 
+                Passionate full stack developer and entrepreneur building innovative digital solutions.
                 BCA graduate (2024) with expertise in modern web technologies and business development.
               </p>
             </div>
-            
+
             <div className="flex flex-wrap gap-3 md:gap-4">
               <Button asChild size="lg" className="group bg-gradient-to-r from-primary to-secondary text-foreground shadow-glow hover:-translate-y-0.5 transition-transform duration-300">
                 <a href="mailto:khadoliyavikash@gmail.com">
@@ -66,10 +66,10 @@ const Hero = () => {
                 </a>
               </Button>
             </div>
-            
+
             {/* Social icons moved to footer; removed here for cleaner hero and better mobile spacing */}
           </div>
-          
+
           {/* Profile Section */}
           <div className="flex justify-center animate-scale-in">
             <div className="relative group card-3d">
@@ -91,7 +91,7 @@ const Hero = () => {
                   <div className="text-sm text-muted-foreground font-medium">Founder & CEO at W3 Software Solutions</div>
                   <div className="mt-3 flex items-center justify-center">
                     <Button asChild size="sm" className="cta-visit bg-gradient-to-r from-primary to-secondary text-black font-semibold shadow-lg px-4 py-2 rounded-lg border border-white/20">
-                      <a href="https://w3softwaresolutions.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      <a href="https://w3softwaresolutions.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                         <Globe className="w-4 h-4" />
                         Visit Website
                       </a>

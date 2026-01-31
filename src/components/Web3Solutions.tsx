@@ -59,7 +59,7 @@ const Web3Solutions = () => {
             size="lg"
             className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 shadow-glow"
           >
-            <a href="https://w3softwaresolutions.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <a href="https://w3softwaresolutions.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <Globe className="w-5 h-5" />
               Visit W3 Software Solutions
             </a>
