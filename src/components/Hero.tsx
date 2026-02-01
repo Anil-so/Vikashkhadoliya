@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-20 md:py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Text Content */}
-          <div className="order-2 lg:order-1 space-y-4 md:space-y-6 animate-fade-in">
+          <div className="order-1 space-y-4 md:space-y-6 animate-fade-in">
             <div className="space-y-6">
               <div className="flex flex-wrap gap-3">
                 <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
@@ -71,7 +71,7 @@ const Hero = () => {
           </div>
 
           {/* Profile Section */}
-          <div className="order-1 lg:order-2 flex justify-center animate-scale-in">
+          <div className="order-2 flex justify-center animate-scale-in">
             <div className="relative group card-3d">
               <div className="absolute inset-0 bg-gradient-professional rounded-2xl blur-2xl opacity-40 scale-110 group-hover:opacity-80 transition-opacity"></div>
               <div className="relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8">
