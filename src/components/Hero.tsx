@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-20 md:py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Text Content */}
-          <div className="space-y-4 md:space-y-6 animate-fade-in">
+          <div className="order-2 lg:order-1 space-y-4 md:space-y-6 animate-fade-in">
             <div className="space-y-6">
               <div className="flex flex-wrap gap-3">
                 <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
@@ -71,10 +71,10 @@ const Hero = () => {
           </div>
 
           {/* Profile Section */}
-          <div className="flex justify-center animate-scale-in">
+          <div className="order-1 lg:order-2 flex justify-center animate-scale-in">
             <div className="relative group card-3d">
               <div className="absolute inset-0 bg-gradient-professional rounded-2xl blur-2xl opacity-40 scale-110 group-hover:opacity-80 transition-opacity"></div>
-              <div className="relative flex items-center justify-center">
+              <div className="relative flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8">
                 {/* Enlarged, centered square profile frame (responsive) */}
                 <div className="relative w-64 sm:w-80 md:w-96 lg:w-[36rem] max-w-[86vw] aspect-square rounded-3xl border border-white/10 overflow-hidden backdrop-blur-md shadow-[0_30px_80px_-40px_rgba(0,0,0,0.85)] glow-border founder-frame mx-auto">
                   <div className="absolute inset-0 bg-gradient-to-b from-white/8 via-transparent to-white/4 opacity-40 animate-pulse"></div>
@@ -87,9 +87,9 @@ const Hero = () => {
                   />
                 </div>
                 {/* Caption and CTA below the image */}
-                <div className="mt-4 sm:mt-6 text-center">
+                <div className="text-center lg:text-left">
                   <div className="text-sm text-muted-foreground font-medium">Founder & CEO at W3 Software Solutions</div>
-                  <div className="mt-3 flex items-center justify-center">
+                  <div className="mt-3 flex items-center justify-center lg:justify-start">
                     <Button asChild size="sm" className="cta-visit bg-gradient-to-r from-primary to-secondary text-black font-semibold shadow-lg px-4 py-2 rounded-lg border border-white/20">
                       <a href="https://w3softwaresolutions.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                         <Globe className="w-4 h-4" />
