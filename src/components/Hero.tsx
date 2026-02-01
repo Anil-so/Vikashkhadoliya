@@ -97,6 +97,24 @@ const Hero = () => {
                       </a>
                     </Button>
                   </div>
+
+                  {/* Additional Content to fill mobile space */}
+                  <div className="mt-6 pt-6 border-t border-white/10 space-y-4 max-w-xs mx-auto lg:mx-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed font-medium italic">
+                      "Dedicated to bridging the gap between traditional business and modern digital innovation."
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                      <Badge variant="outline" className="text-[10px] py-0 px-2 border-primary/30 text-primary bg-primary/5">
+                        Full Stack
+                      </Badge>
+                      <Badge variant="outline" className="text-[10px] py-0 px-2 border-secondary/30 text-secondary bg-secondary/5">
+                        Web3 Solutions
+                      </Badge>
+                      <Badge variant="outline" className="text-[10px] py-0 px-2 border-accent/30 text-accent bg-accent/5">
+                        AI Automation
+                      </Badge>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
